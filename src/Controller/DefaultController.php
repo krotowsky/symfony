@@ -2,17 +2,21 @@
 
 namespace App\Controller;
 
+use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
-    public function index()
+    /**
+     * @return Response
+     *
+     * @Route("/{page}")
+     */
+    public function indexAction($page)
     {
-        $number = mt_rand(0, 100);
-
         return new Response(
-            '<html><body>Lucky number: '.$number.'</body></html>'
+            '<html><body>Page number: '.$page.'</body></html>'
         );
     }
 }
