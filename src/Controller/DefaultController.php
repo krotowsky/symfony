@@ -11,7 +11,7 @@ class DefaultController
     /**
      * @return Response
      *
-     * @Route("/")
+     * @Route("/asd/{page}")
      */
     public function indexAction($page)
     {
